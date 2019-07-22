@@ -3,6 +3,7 @@
     "version": "0.0.1",
     "private": false,
     "dependencies": {
+        "bearcat": "^0.4.29",
         "pomelo": "2.2.5"
     }
 }
