@@ -14,3 +14,11 @@ game-server/logs/rpc-debug-master-server-1.log
 game-server/logs/rpc-log-connector-server-1.log
 game-server/logs/rpc-log-master-server-1.log
 game-server/logs/pomelo-gate-server.log
+game-server/logs/rpc-log-undefined.log
+game-server/logs/con-log-undefined.log
+game-server/logs/forward-log-undefined.log
+game-server/logs/pomelo-gate-server.log
+game-server/logs/pomelo-rpc-undefined.log
+game-server/logs/pomelo-undefined.log
+game-server/logs/rpc-debug-undefined.log
+game-server/logs/pomelo-gate-server.log

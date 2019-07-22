@@ -1,24 +1,35 @@
 var pomelo = require('pomelo');
-
+var bearcat = require('bearcat');
 /**
  * Init app for client.
  */
 var app = pomelo.createApp();
 app.set('name', 'game');
 
-// app configuration
-app.configure('production|development', 'connector|gate', function(){
-  app.set('connectorConfig',
-    {
-      connector : pomelo.connectors.hybridconnector,
-      heartbeat : 3,
-      useDict : true,
-      useProtobuf : true
-    });
-});
+var Configure = function() {
+  // app configuration
+  app.configure('production|development', 'connector|gate', function(){
+    app.set('connectorConfig',
+      {
+        connector : pomelo.connectors.hybridconnector,
+        heartbeat : 3,
+        useDict : true,
+        useProtobuf : true
+      });
+  });
+}
 
-// start app
-app.start();
+var contextPath = require.resolve('./context.json');
+bearcat.createApp([contextPath]);
+
+bearcat.start(function() {
+  Configure(); // pomelo configure in app.js
+  app.set('bearcat', bearcat);
+
+  // start app
+  app.start();
+})
+
 
 process.on('uncaughtException', function (err) {
   console.error(' Caught exception: ' + err.stack);
