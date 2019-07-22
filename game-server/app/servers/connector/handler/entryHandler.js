@@ -1,6 +1,4 @@
-module.exports = function(app) {
-  return new Handler(app);
-};
+var bearcat = require('bearcat');
 
 var Handler = function(app) {
   this.app = app;
@@ -49,3 +47,16 @@ Handler.prototype.subscribe = function(msg, session, next) {
 	};
   next(null, result);
 };
+
+module.exports = function(app) {
+	return bearcat.getBean({
+		id: 'entryHandler',
+		func: Handler,
+		args: [
+			{
+				name: 'app',
+				value: app
+			}
+		]
+	})
+  };
