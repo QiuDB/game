@@ -1,9 +1,12 @@
-# game</br>
+# game
 pomelo-game</br>
 ****
-#1 pomelo init</br>
+
+# pomelo project
+pomelo init</br>
 ****
-#git command</br>
+
+# git command
 git add .</br>
 git commit -m "comments"</br>
 git push origin master</br>
