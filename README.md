@@ -4,6 +4,7 @@ pomelo-game</br>
 
 # pomelo project
 pomelo init</br>
+npm-install.bat</br>
 ****
 
 # git command
