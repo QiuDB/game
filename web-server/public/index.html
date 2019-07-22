@@ -36,8 +36,12 @@
             port: data.port,
             log: true
           }, function () {
-            pomelo.request("gate.connector.entry", {}, function () {
-              alert("connect to connector host:" + data.host + "port: " + data.port + " success.");
+            pomelo.request("connector.entryHandler.entry", {}, function (data) {
+              if (data.code === 200) {
+                alert('connect to connector server success.');
+              } else {
+                alert("connect to connector fail");
+              }
             });
           });
         });
