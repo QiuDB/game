@@ -13,3 +13,4 @@ game-server/logs/rpc-debug-connector-server-1.log
 game-server/logs/rpc-debug-master-server-1.log
 game-server/logs/rpc-log-connector-server-1.log
 game-server/logs/rpc-log-master-server-1.log
+game-server/logs/pomelo-gate-server.log

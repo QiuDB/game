@@ -86,3 +86,7 @@
 [2019-07-22 11:54:48.926] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39m"gate-server" finish start
 [2019-07-22 11:54:48.928] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39m"gate-server" startup in 442 ms
 [2019-07-22 11:54:48.934] [DEBUG] pomelo - [36m[E:\game\game-server\node_modules\pomelo\lib\modules\monitorwatcher.js] [39m[gate-server] receive addServer signal: {"action":"addServer","server":{"main":"E:\\game\\game-server\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":3150,"clientHost":"127.0.0.1","clientPort":3010,"frontend":"true","serverType":"connector","pid":15136}}
+[2019-07-22 13:51:48.661] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39mapplication inited: "gate-server"
+[2019-07-22 13:51:50.029] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39m"gate-server" enter after start...
+[2019-07-22 13:51:50.032] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39m"gate-server" finish start
+[2019-07-22 13:51:50.032] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39m"gate-server" startup in 1051 ms
