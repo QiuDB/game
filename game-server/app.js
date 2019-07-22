@@ -7,7 +7,7 @@ var app = pomelo.createApp();
 app.set('name', 'game');
 
 // app configuration
-app.configure('production|development', 'connector', function(){
+app.configure('production|development', 'connector|gate', function(){
   app.set('connectorConfig',
     {
       connector : pomelo.connectors.hybridconnector,

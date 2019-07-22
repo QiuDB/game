@@ -1,0 +1,15 @@
+game-server/logs/pomelo-rpc-master-server-1.log
+game-server/logs/admin.log
+game-server/logs/con-log-connector-server-1.log
+game-server/logs/con-log-master-server-1.log
+game-server/logs/crash.log
+game-server/logs/forward-log-connector-server-1.log
+game-server/logs/forward-log-master-server-1.log
+game-server/logs/pomelo-admin.log
+game-server/logs/pomelo-connector-server-1.log
+game-server/logs/pomelo-master-server-1.log
+game-server/logs/pomelo-rpc-connector-server-1.log
+game-server/logs/rpc-debug-connector-server-1.log
+game-server/logs/rpc-debug-master-server-1.log
+game-server/logs/rpc-log-connector-server-1.log
+game-server/logs/rpc-log-master-server-1.log
