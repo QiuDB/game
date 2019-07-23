@@ -17,6 +17,12 @@ var Configure = function() {
         useProtobuf : true
       });
   });
+
+  app.configure('production|development', function() {
+    app.loadConfig('mysql', app.getBase() + '/config/mysql/adb.json');
+    let dbClient = bearcat.getBean('mysqlPool').init(app.get('mysql'));
+    app.set('dbClient', dbClient);
+  })
 }
 
 var contextPath = require.resolve('./context.json');
