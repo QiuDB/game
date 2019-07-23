@@ -5,6 +5,7 @@
     "dependencies": {
         "bearcat": "^0.4.29",
         "crc": "^3.8.0",
+        "mysql": "^2.17.1",
         "pomelo": "2.2.5"
     }
 }
