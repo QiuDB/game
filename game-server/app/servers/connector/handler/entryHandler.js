@@ -1,8 +1,14 @@
 var bearcat = require('bearcat');
+var logger = require('pomelo-logger').getLogger('pomelo', __filename)
+
+// generate playerId
+var id = 1;
 
 var Handler = function(app) {
   this.app = app;
+  this.serverId = app.get('serverId').split('-')[2];
   this.consts = null;
+  this.dispatcher = null;
 };
 
 /**
@@ -14,8 +20,36 @@ var Handler = function(app) {
  * @return {Void}
  */
 Handler.prototype.entry = function(msg, session, next) {
-  next(null, {code: this.consts.MESSAGE.RES, msg: 'game server is ok.'});
+	var self = this;
+	var playerId = parseInt(this.serverId + id, 10);
+	id += 1;
+
+	var areas = this.app.getServersByType('area');
+	if (!areas || areas.length === 0) {
+		next (null, {
+			code: this.consts.MESSAGE.ERR,
+			message: 'Not find any area server'
+		});
+		return;
+	}
+	let res = this.dispatcher.dispatch(playerId.toString(), areas);
+	session.bind(playerId);
+	session.set('playerId', playerId);
+	session.set('areaId', res.areaId);
+
+	session.on('closed', onUserLeave.bind(null, self.app));
+	session.pushAll();
+	next(null, {
+		code: this.consts.MESSAGE.RES,
+		playerId: playerId
+	});
 };
+
+var onUserLeave = function(app, session, reason) {
+	if (session && session.uid) {
+		logger.info('uid(%j) 离开游戏', session.uid);
+	}
+}
 
 /**
  * Publish route for mqtt connector.
@@ -63,6 +97,10 @@ module.exports = function(app) {
 			{
 				name: 'consts',
 				ref: 'consts'
+			},
+			{
+				name: 'dispatcher',
+				ref: 'dispatcher'
 			}
 		]
 	})

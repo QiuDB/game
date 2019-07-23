@@ -38,7 +38,7 @@
           }, function () {
             pomelo.request("connector.entryHandler.entry", {}, function (data) {
               if (data.code === 200) {
-                alert('connect to connector server success.');
+                alert('connect to connector server success uid: ' + data.playerId);
               } else {
                 alert("connect to connector fail");
               }
