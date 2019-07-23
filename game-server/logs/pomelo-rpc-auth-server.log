@@ -1,0 +1,11 @@
+[2019-07-23 15:45:57.415] [ERROR] pomelo-rpc - [31m[mqtt-acceptor] [39mprocess rpc message error TypeError: dbClient.query is not a function
+    at AccountDB.getAccountByPUid (E:\game\game-server\app\mysql\adb\accountDB.js:16:14)
+    at AuthRemote.authAccount (E:\game\game-server\app\servers\auth\remote\authRemote.js:11:20)
+    at DynamicMetaProxy._dyInvoke (E:\game\game-server\node_modules\bearcat\lib\aop\framework\dynamicMetaProxy.js:77:29)
+    at DynamicMetaProxy.self.(anonymous function) [as authAccount] (E:\game\game-server\node_modules\bearcat\lib\aop\framework\dynamicMetaProxy.js:59:19)
+    at Dispatcher.pro.route (E:\game\game-server\node_modules\pomelo-rpc\lib\rpc-server\dispatcher.js:52:10)
+    at Acceptor.cb (E:\game\game-server\node_modules\pomelo-rpc\lib\rpc-server\gateway.js:22:16)
+    at processMsg (E:\game\game-server\node_modules\pomelo-rpc\lib\rpc-server\acceptors\mqtt-acceptor.js:138:12)
+    at Connection.<anonymous> (E:\game\game-server\node_modules\pomelo-rpc\lib\rpc-server\acceptors\mqtt-acceptor.js:62:11)
+    at emitOne (events.js:116:13)
+    at Connection.emit (events.js:211:7)

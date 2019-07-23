@@ -1,14 +1,11 @@
 var bearcat = require('bearcat');
 var logger = require('pomelo-logger').getLogger('pomelo', __filename)
 
-// generate playerId
-var id = 1;
-
-var Handler = function(app) {
-  this.app = app;
-  this.serverId = app.get('serverId').split('-')[2];
-  this.consts = null;
-  this.dispatcher = null;
+var Handler = function (app) {
+	this.app = app;
+	this.consts = null;
+	this.dispatcher = null;
+	this.utils = null;
 };
 
 /**
@@ -19,33 +16,46 @@ var Handler = function(app) {
  * @param  {Function} next    next step callback
  * @return {Void}
  */
-Handler.prototype.entry = function(msg, session, next) {
+Handler.prototype.entry = function (msg, session, next) {
 	var self = this;
-	var playerId = parseInt(this.serverId + id, 10);
-	id += 1;
-
-	var areas = this.app.getServersByType('area');
-	if (!areas || areas.length === 0) {
-		next (null, {
-			code: this.consts.MESSAGE.ERR,
-			message: 'Not find any area server'
-		});
+	var pUid = msg.pUid || this.utils.random(1,10).toString();
+	logger.warn('pUid is %j', pUid)
+	if (!pUid || typeof pUid !== 'string') {
+		next(null, { code: this.consts.MESSAGE.ERR, message: 'pUid invalid' });
 		return;
 	}
-	let res = this.dispatcher.dispatch(playerId.toString(), areas);
-	session.bind(playerId);
-	session.set('playerId', playerId);
-	session.set('areaId', res.areaId);
 
-	session.on('closed', onUserLeave.bind(null, self.app));
-	session.pushAll();
-	next(null, {
-		code: this.consts.MESSAGE.RES,
-		playerId: playerId
-	});
+	self.app.rpc.auth.authRemote.authAccount.toServer('auth-server', {
+		pUid: pUid
+	}, function (err, result) {
+		if (!!err) {
+			next(null, { code: self.consts.MESSAGE.ERR, message: 'auth failed' });
+			return;
+		}
+
+		let uid = result.uid;
+		var areas = self.app.getServersByType('area');
+		if (!areas || areas.length === 0) {
+			next(null, {
+				code: self.consts.MESSAGE.ERR,
+				message: 'Not find any area server'
+			});
+			return;
+		}
+		let res = self.dispatcher.dispatch(uid.toString(), areas);
+		session.bind(uid);
+		session.set('areaId', res.areaId);
+
+		session.on('closed', onUserLeave.bind(null, self.app));
+		session.pushAll();
+		next(null, {
+			code: self.consts.MESSAGE.RES,
+			uid: uid
+		});
+	})
 };
 
-var onUserLeave = function(app, session, reason) {
+var onUserLeave = function (app, session, reason) {
 	if (session && session.uid) {
 		logger.info('uid(%j) 离开游戏', session.uid);
 	}
@@ -59,12 +69,12 @@ var onUserLeave = function(app, session, reason) {
  * @param  {Function} next    next step callback
  * @return {Void}
  */
-Handler.prototype.publish = function(msg, session, next) {
+Handler.prototype.publish = function (msg, session, next) {
 	var result = {
 		topic: 'publish',
-		payload: JSON.stringify({code: 200, msg: 'publish message is ok.'})
+		payload: JSON.stringify({ code: 200, msg: 'publish message is ok.' })
 	};
-  next(null, result);
+	next(null, result);
 };
 
 /**
@@ -75,15 +85,15 @@ Handler.prototype.publish = function(msg, session, next) {
  * @param  {Function} next    next step callback
  * @return {Void}
  */
-Handler.prototype.subscribe = function(msg, session, next) {
+Handler.prototype.subscribe = function (msg, session, next) {
 	var result = {
 		topic: 'subscribe',
-		payload: JSON.stringify({code: 200, msg: 'subscribe message is ok.'})
+		payload: JSON.stringify({ code: 200, msg: 'subscribe message is ok.' })
 	};
-  next(null, result);
+	next(null, result);
 };
 
-module.exports = function(app) {
+module.exports = function (app) {
 	return bearcat.getBean({
 		id: 'entryHandler',
 		func: Handler,
@@ -101,7 +111,11 @@ module.exports = function(app) {
 			{
 				name: 'dispatcher',
 				ref: 'dispatcher'
+			},
+			{
+				name: 'utils',
+				ref: 'utils'
 			}
 		]
 	})
-  };
+};

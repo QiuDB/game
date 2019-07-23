@@ -1,0 +1,12 @@
+[2019-07-23 15:45:57.416] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc client connector-server-2 process remote server auth-server message with error: TypeError: Cannot read property 'MESSAGE' of undefined
+    at E:\game\game-server\app\servers\connector\handler\entryHandler.js:31:35
+    at Object.Utils.applyCallback (E:\game\game-server\node_modules\pomelo-rpc\lib\util\utils.js:11:6)
+    at E:\game\game-server\node_modules\pomelo-rpc\lib\rpc-client\mailstation.js:268:15
+    at doFilter (E:\game\game-server\node_modules\pomelo-rpc\lib\rpc-client\mailstation.js:356:5)
+    at E:\game\game-server\node_modules\pomelo-rpc\lib\rpc-client\mailstation.js:264:7
+    at processMsg (E:\game\game-server\node_modules\pomelo-rpc\lib\rpc-client\mailboxes\mqtt-mailbox.js:245:3)
+    at Connection.<anonymous> (E:\game\game-server\node_modules\pomelo-rpc\lib\rpc-client\mailboxes\mqtt-mailbox.js:79:9)
+    at emitOne (events.js:116:13)
+    at Connection.emit (events.js:211:7)
+    at Connection.emitPacket (E:\game\game-server\node_modules\mqtt-connection\connection.js:14:8)
+[2019-07-23 15:47:46.193] [ERROR] pomelo-rpc - [31m[mqtt-mailbox] [39mrpc socket connector-server-2 is error, remote server auth-server host: 127.0.0.1, port: 9001

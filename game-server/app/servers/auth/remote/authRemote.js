@@ -6,9 +6,10 @@ let AuthRemote = function(app) {
     this.utils = null;
 };
 
-AuthRemote.prototype.authAccount = function(pUid, cb) {
+AuthRemote.prototype.authAccount = function(msg, cb) {
     let self = this;
-    this.accountDB.getRecord(this.app, pUid, function(err, results) {
+    let pUid = msg.pUid;
+    this.accountDB.getAccountByPUid(this.app.get('dbClient_adb'), pUid, function(err, results) {
         if (!!err) {
             self.utils.invokeCallback(cb, err.message);
             return;
@@ -27,12 +28,12 @@ AuthRemote.prototype.authAccount = function(pUid, cb) {
 
 AuthRemote.prototype.createAccount = function(pUid, cb) {
     let self = this;
-    this.accountDB.createAccount(this.app, pUid, function(err, results, fileds) {
+    this.accountDB.createAccount(this.app.get('dbClient_adb'), pUid, function(err, result, fileds) {
         if (!!err) {
             self.utils.invokeCallback(cb, err.message);
             return;
         }
-
+        self.utils.invokeCallback(cb, null, result)
     })
 }
 
@@ -50,6 +51,10 @@ module.exports = function(app) {
             {
                 name: 'accountDB',
                 ref: 'accountDB'
+            },
+            {
+                name: 'utils',
+                ref: 'utils'
             }
         ]
     })
