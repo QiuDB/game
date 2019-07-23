@@ -16,6 +16,9 @@
       {"id": "area-server-3", "host":"127.0.0.1", "port": 6003, "areaId": 3},
       {"id": "area-server-4", "host":"127.0.0.1", "port": 6004, "areaId": 4},
       {"id": "area-server-5", "host":"127.0.0.1", "port": 6005, "areaId": 5}
+    ],
+    "auth": [
+      {"id": "auth-server", "host":"127.0.0.1", "port": 9001}
     ]
   },
   "production":{

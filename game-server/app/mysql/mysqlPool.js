@@ -27,7 +27,7 @@ MysqlPool.prototype.NNDInit = function(mysqlConfig) {
     this.pool = mysql.createPool({
         host: mysqlConfig.host,
         user: mysqlConfig.user,
-        password: mysql.password,
+        password: mysqlConfig.password,
         database: mysqlConfig.database,
         port: mysqlConfig.port,
         connectionLimit: 10

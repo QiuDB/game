@@ -1,0 +1,45 @@
+[2019-07-23 14:18:35.264] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39mapplication inited: "auth-server"
+[2019-07-23 14:26:11.063] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39mapplication inited: "auth-server"
+[2019-07-23 14:33:57.915] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39mapplication inited: "auth-server"
+[2019-07-23 14:33:58.579] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39m"auth-server" enter after start...
+[2019-07-23 14:33:58.579] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39m"auth-server" finish start
+[2019-07-23 14:33:58.579] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39m"auth-server" startup in 429 ms
+[2019-07-23 14:35:51.936] [WARN] pomelo - [33m[E:\game\game-server\app\mysql\adb\accountDB.js] [39mpUid is 1
+[2019-07-23 14:35:51.964] [DEBUG] pomelo - [36m[E:\game\game-server\app\mysql\adb\accountDB.js] [39merr is {}, results is undefined, fields is undefined
+[2019-07-23 14:35:51.964] [ERROR] pomelo - [31m[E:\game\game-server\app\mysql\adb\accountDB.js] [39mError: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: NO)
+[2019-07-23 14:37:06.907] [WARN] pomelo - [33m[E:\game\game-server\app\mysql\adb\accountDB.js] [39mpUid is 1
+[2019-07-23 14:37:06.911] [DEBUG] pomelo - [36m[E:\game\game-server\app\mysql\adb\accountDB.js] [39merr is {}, results is undefined, fields is undefined
+[2019-07-23 14:37:06.912] [ERROR] pomelo - [31m[E:\game\game-server\app\mysql\adb\accountDB.js] [39mError: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: NO)
+[2019-07-23 14:37:13.313] [WARN] pomelo - [33m[E:\game\game-server\app\mysql\adb\accountDB.js] [39mpUid is 1
+[2019-07-23 14:37:13.316] [DEBUG] pomelo - [36m[E:\game\game-server\app\mysql\adb\accountDB.js] [39merr is {}, results is undefined, fields is undefined
+[2019-07-23 14:37:13.316] [ERROR] pomelo - [31m[E:\game\game-server\app\mysql\adb\accountDB.js] [39mError: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: NO)
+[2019-07-23 14:39:04.250] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39mapplication inited: "auth-server"
+[2019-07-23 14:39:05.186] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39m"auth-server" enter after start...
+[2019-07-23 14:39:05.188] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39m"auth-server" finish start
+[2019-07-23 14:39:05.188] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39m"auth-server" startup in 557 ms
+[2019-07-23 14:39:23.259] [WARN] pomelo - [33m[E:\game\game-server\app\mysql\adb\accountDB.js] [39mpUid is 1
+[2019-07-23 14:39:23.268] [DEBUG] pomelo - [36m[E:\game\game-server\app\mysql\adb\accountDB.js] [39merr is {}, results is undefined, fields is undefined
+[2019-07-23 14:39:23.268] [ERROR] pomelo - [31m[E:\game\game-server\app\mysql\adb\accountDB.js] [39mError: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: NO)
+[2019-07-23 14:43:54.724] [WARN] pomelo - [33m[E:\game\game-server\app\mysql\adb\accountDB.js] [39mpUid is 1
+[2019-07-23 14:43:54.729] [DEBUG] pomelo - [36m[E:\game\game-server\app\mysql\adb\accountDB.js] [39merr is {}, results is undefined, fields is undefined
+[2019-07-23 14:43:54.729] [ERROR] pomelo - [31m[E:\game\game-server\app\mysql\adb\accountDB.js] [39mError: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: NO)
+[2019-07-23 14:44:04.475] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39mapplication inited: "auth-server"
+[2019-07-23 14:44:05.822] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39m"auth-server" enter after start...
+[2019-07-23 14:44:05.823] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39m"auth-server" finish start
+[2019-07-23 14:44:05.823] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39m"auth-server" startup in 731 ms
+[2019-07-23 14:44:05.891] [DEBUG] pomelo - [36m[E:\game\game-server\node_modules\pomelo\lib\modules\monitorwatcher.js] [39m[auth-server] receive addServer signal: {"action":"addServer","server":{"main":"E:\\game\\game-server\\app.js","env":"development","id":"area-server-5","host":"127.0.0.1","port":6005,"areaId":5,"serverType":"area","pid":5236}}
+[2019-07-23 14:44:06.034] [DEBUG] pomelo - [36m[E:\game\game-server\node_modules\pomelo\lib\modules\monitorwatcher.js] [39m[auth-server] receive addServer signal: {"action":"addServer","server":{"main":"E:\\game\\game-server\\app.js","env":"development","id":"area-server-4","host":"127.0.0.1","port":6004,"areaId":4,"serverType":"area","pid":10548}}
+[2019-07-23 14:44:24.667] [WARN] pomelo - [33m[E:\game\game-server\app\mysql\adb\accountDB.js] [39mpUid is 1
+[2019-07-23 14:44:24.681] [DEBUG] pomelo - [36m[E:\game\game-server\app\mysql\adb\accountDB.js] [39merr is {}, results is undefined, fields is undefined
+[2019-07-23 14:44:24.681] [ERROR] pomelo - [31m[E:\game\game-server\app\mysql\adb\accountDB.js] [39mError: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'windows10.microdone.cn' (using password: NO)
+[2019-07-23 14:44:58.127] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39mapplication inited: "auth-server"
+[2019-07-23 14:44:59.592] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39m"auth-server" enter after start...
+[2019-07-23 14:44:59.593] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39m"auth-server" finish start
+[2019-07-23 14:44:59.593] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39m"auth-server" startup in 1035 ms
+[2019-07-23 14:44:59.594] [DEBUG] pomelo - [36m[E:\game\game-server\node_modules\pomelo\lib\modules\monitorwatcher.js] [39m[auth-server] receive addServer signal: {"action":"addServer","server":{"main":"E:\\game\\game-server\\app.js","env":"development","id":"area-server-5","host":"127.0.0.1","port":6005,"areaId":5,"serverType":"area","pid":10084}}
+[2019-07-23 14:44:59.595] [DEBUG] pomelo - [36m[E:\game\game-server\node_modules\pomelo\lib\modules\monitorwatcher.js] [39m[auth-server] receive addServer signal: {"action":"addServer","server":{"main":"E:\\game\\game-server\\app.js","env":"development","id":"connector-server-2","host":"127.0.0.1","port":4002,"clientHost":"127.0.0.1","clientPort":5002,"frontend":"true","serverType":"connector","pid":5236}}
+[2019-07-23 14:44:59.762] [DEBUG] pomelo - [36m[E:\game\game-server\node_modules\pomelo\lib\modules\monitorwatcher.js] [39m[auth-server] receive addServer signal: {"action":"addServer","server":{"main":"E:\\game\\game-server\\app.js","env":"development","id":"area-server-2","host":"127.0.0.1","port":6002,"areaId":2,"serverType":"area","pid":11708}}
+[2019-07-23 14:45:00.050] [DEBUG] pomelo - [36m[E:\game\game-server\node_modules\pomelo\lib\modules\monitorwatcher.js] [39m[auth-server] receive addServer signal: {"action":"addServer","server":{"main":"E:\\game\\game-server\\app.js","env":"development","id":"connector-server-5","host":"127.0.0.1","port":4005,"clientHost":"127.0.0.1","clientPort":5005,"frontend":"true","serverType":"connector","pid":4580}}
+[2019-07-23 14:45:14.332] [WARN] pomelo - [33m[E:\game\game-server\app\mysql\adb\accountDB.js] [39mpUid is 1
+[2019-07-23 14:45:14.343] [DEBUG] pomelo - [36m[E:\game\game-server\app\mysql\adb\accountDB.js] [39merr is {}, results is undefined, fields is undefined
+[2019-07-23 14:45:14.343] [ERROR] pomelo - [31m[E:\game\game-server\app\mysql\adb\accountDB.js] [39mError: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: NO)
