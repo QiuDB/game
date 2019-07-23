@@ -12,10 +12,10 @@
     ],
     "area": [
       {"id": "area-server-1", "host":"127.0.0.1", "port": 6001, "areaId": 1},
-      {"id": "area-server-1", "host":"127.0.0.1", "port": 6001, "areaId": 2},
-      {"id": "area-server-1", "host":"127.0.0.1", "port": 6001, "areaId": 3},
-      {"id": "area-server-1", "host":"127.0.0.1", "port": 6001, "areaId": 4},
-      {"id": "area-server-1", "host":"127.0.0.1", "port": 6001, "areaId": 5}
+      {"id": "area-server-2", "host":"127.0.0.1", "port": 6002, "areaId": 2},
+      {"id": "area-server-3", "host":"127.0.0.1", "port": 6003, "areaId": 3},
+      {"id": "area-server-4", "host":"127.0.0.1", "port": 6004, "areaId": 4},
+      {"id": "area-server-5", "host":"127.0.0.1", "port": 6005, "areaId": 5}
     ]
   },
   "production":{
