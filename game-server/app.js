@@ -18,15 +18,19 @@ var Configure = function() {
       });
   });
 
-  app.configure('production|development', function() {
-    app.loadConfig('mysql', app.getBase() + '/config/mysql/adb.json');
-    let dbClient = bearcat.getBean('mysqlPool').init(app.get('mysql'));
-    app.set('dbClient', dbClient);
+  app.configure('production|development', 'auth', function() {
+    app.loadConfig('mysql_adb', app.getBase() + '/config/mysql/adb.json');
+    let dbClient = bearcat.getBean('mysqlPool').init(app.get('mysql_adb'));
+    app.set('dbClient_adb', dbClient);
   })
 }
 
 var contextPath = require.resolve('./context.json');
-bearcat.createApp([contextPath]);
+bearcat.createApp([contextPath],{
+  BEARCAT_LOGGER: "off", //这边应设置为 off，否则 由于 bear 还没加载完，会生成 undefined 名字的 log，并且所有日志会写入到这个 undefined 文件里
+  BEARCAT_HOT: "on",// 开启热更新，如果是off 那么不会热更新
+  BEARCAT_FUNCTION_STRING: true
+});
 
 bearcat.start(function() {
   Configure(); // pomelo configure in app.js
