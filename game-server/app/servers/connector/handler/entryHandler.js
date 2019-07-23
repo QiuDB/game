@@ -2,6 +2,7 @@ var bearcat = require('bearcat');
 
 var Handler = function(app) {
   this.app = app;
+  this.consts = null;
 };
 
 /**
@@ -13,7 +14,7 @@ var Handler = function(app) {
  * @return {Void}
  */
 Handler.prototype.entry = function(msg, session, next) {
-  next(null, {code: 200, msg: 'game server is ok.'});
+  next(null, {code: this.consts.MESSAGE.RES, msg: 'game server is ok.'});
 };
 
 /**
@@ -56,6 +57,12 @@ module.exports = function(app) {
 			{
 				name: 'app',
 				value: app
+			}
+		],
+		props: [
+			{
+				name: 'consts',
+				ref: 'consts'
 			}
 		]
 	})
