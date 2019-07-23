@@ -2,9 +2,20 @@
   "development":{
     "gate": [
       {"id": "gate-server", "host": "127.0.0.1", "port": 4000, "clientHost": "127.0.0.1", "clientPort": 5000, "frontend": true}
-      ],
+    ],
     "connector": [
-    {"id": "connector-server-1", "host": "127.0.0.1", "port": 3150, "clientHost": "127.0.0.1", "clientPort": 3010, "frontend": true}
+      {"id": "connector-server-1", "host": "127.0.0.1", "port": 4001, "clientHost": "127.0.0.1", "clientPort": 5001, "frontend": true},
+      {"id": "connector-server-2", "host": "127.0.0.1", "port": 4002, "clientHost": "127.0.0.1", "clientPort": 5002, "frontend": true},
+      {"id": "connector-server-3", "host": "127.0.0.1", "port": 4003, "clientHost": "127.0.0.1", "clientPort": 5003, "frontend": true},
+      {"id": "connector-server-4", "host": "127.0.0.1", "port": 4004, "clientHost": "127.0.0.1", "clientPort": 5004, "frontend": true},
+      {"id": "connector-server-5", "host": "127.0.0.1", "port": 4005, "clientHost": "127.0.0.1", "clientPort": 5005, "frontend": true}
+    ],
+    "area": [
+      {"id": "area-server-1", "host":"127.0.0.1", "port": 6001, "areaId": 1},
+      {"id": "area-server-1", "host":"127.0.0.1", "port": 6001, "areaId": 2},
+      {"id": "area-server-1", "host":"127.0.0.1", "port": 6001, "areaId": 3},
+      {"id": "area-server-1", "host":"127.0.0.1", "port": 6001, "areaId": 4},
+      {"id": "area-server-1", "host":"127.0.0.1", "port": 6001, "areaId": 5}
     ]
   },
   "production":{

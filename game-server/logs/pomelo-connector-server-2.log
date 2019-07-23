@@ -51,3 +51,4 @@
 [2019-07-22 11:47:58.120] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39m"connector-server-2" finish start
 [2019-07-22 11:47:58.120] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39m"connector-server-2" startup in 544 ms
 [2019-07-22 11:47:58.148] [DEBUG] pomelo - [36m[E:\game\game-server\node_modules\pomelo\lib\modules\monitorwatcher.js] [39m[connector-server-2] receive addServer signal: {"action":"addServer","server":{"main":"E:\\game\\game-server\\app.js","env":"development","id":"connector-server-1","host":"127.0.0.1","port":4001,"clientHost":"127.0.0.1","clientPort":5001,"frontend":"true","serverType":"connector","pid":24300}}
+[2019-07-23 09:07:55.548] [INFO] pomelo - [32m[E:\game\game-server\node_modules\pomelo\lib\application.js] [39mapplication inited: "connector-server-2"
